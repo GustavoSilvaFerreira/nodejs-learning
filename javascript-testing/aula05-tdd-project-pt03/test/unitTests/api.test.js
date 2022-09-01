@@ -61,5 +61,22 @@ describe('API Suite Test', () => {
             
             expect(result.text).to.be.deep.equal(JSON.stringify(expected))
         })
+
+        it('should call route /rent and return a status code 400 with error message', async () => {
+            const result = await request(app)
+                                .post('/rent')
+                                .send({ customerId: '1', carCategoryId: '2' })
+                                .expect(400)
+            const msgError = 'Dados incompletos, necessário informar customerId, carCategoryId e numberOfDays!'
+            expect(result.text).to.be.equal(msgError)
+        })
+
+        it('should call route /re and return a default message', async () => {
+            const result = await request(app)
+                                .get('/re')
+                                .expect(404)
+            const msgError = 'Rota não encontrada!'
+            expect(result.text).to.be.equal(msgError)
+        })
     })
 })
