@@ -4,13 +4,13 @@ const { expect } = require('chai')
 const sinon = require('sinon');
 const { join } = require('path');
 
-const { app, carService} = require('./../../src/api')
-const Transaction = require('./../../src/entities/transaction')
+const { app, carService} = require('../../src/api')
+const Transaction = require('../../src/entities/transaction')
 
 const mocks = {
-    validCarCategory: require('./../mocks/valid-carCategory.json'),
-    validCar: require('./../mocks/valid-car.json'),
-    validCustomer: require('./../mocks/valid-customer.json')
+    validCarCategory: require('../mocks/valid-carCategory.json'),
+    validCar: require('../mocks/valid-car.json'),
+    validCustomer: require('../mocks/valid-customer.json')
 }
 
 describe('API Suite Test', () => {
