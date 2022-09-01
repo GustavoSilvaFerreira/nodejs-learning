@@ -133,7 +133,6 @@ describe('CarService Suite Tests', () => {
             carCategory,
             numberOfDays
         )
-        console.log({result});
 
         const expected = new Transaction({
             customer,

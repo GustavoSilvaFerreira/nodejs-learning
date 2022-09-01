@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "start": "node ./src/api",
     "test": "npx mocha -w --parallel \"./{,!(node_modules)/**/}*.test.js\"",
     "test:cov": "npx nyc npx mocha \"./{,!(node_modules)/**/}*.test.js\"",
     "seed": "node ./seed"
@@ -19,6 +20,7 @@
     "faker": "5.1.0",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
-    "sinon": "^9.2.4"
+    "sinon": "^9.2.4",
+    "supertest": "^6.2.4"
   }
 }
